@@ -1,0 +1,34 @@
+/******************************************************************************
+Write a program that computes the tax and tip on a restaurant bill for a patron
+with a $88.67 meal charge. The tax should be 6.75 percent of the meal cost. The
+tip should be 20 percent of the total after adding the tax. Display the meal 
+cost, tax amount, tip amount and total bill on the screen.
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Variables
+    double mealCharge = 88.67,  // Holds the meal cost
+           taxPercent = 0.0675, // Will hold the tax percentage
+           tipPercent = 0.20,           // Will hold the tip percentage
+           tipAmount,         // Will hold the tip amount
+           taxAmount,         // Will hold the tax amount
+           total;      // Will hold the total amonut
+    
+    // Calculations
+    taxAmount = mealCharge * taxPercent;   // Calculates the tax amount
+    tipAmount = (taxAmount + mealCharge) * tipPercent; // Calculates the tip amount 
+    total = mealCharge + taxAmount + tipAmount; // Calculates the total amount
+    
+    // Display
+    cout << "Restaurant Bill" << endl;
+    cout << "---------------" << endl;
+    cout << "Meal Charge: $" << mealCharge << endl;
+    cout << "Tax Amount:  $" << taxAmount << endl;
+    cout << "Tip Amount:  $" << tipAmount << endl;
+    cout << "Total bill:  $" << total << endl;
+    
+    return 0;
+}
