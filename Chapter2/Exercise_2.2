@@ -1,0 +1,22 @@
+/******************************************************************************
+The East Coast sales division of a company generates 58 percent of total sales.
+Based on that percentage, write a program that will predict how much the East
+Coast division will generate if the company has 8.6 million in sales this year.
+*******************************************************************************/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Variables
+    double Salepercent = 0.58, totalThisYear = 8600000;
+    int predict;
+    
+    // Calculate the percentage
+    predict = (totalThisYear * Salepercent);
+    
+    // Displays the result
+    cout << "The prediction for this year: " << predict;
+    return 0;
+}
